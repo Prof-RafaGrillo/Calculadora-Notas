@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Notas - Uruguai</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho--titulo"> Calculadora de notas</h1>
+        <img src="./img/Logo-Portal.png" alt="" class="logo">
+        <h2 class="cabecalho--subtitulo">CCM República Oriental do Uruguai</h2>
+    </header>
+    <section class="disciplinas">
+        <h3 class="disciplinas--titulo">Adicionar Disciplinas</h3>
+        <form class="disciplinas--form">
+            <label for="materias">Disciplina</label>
+            <input type="text" class="disciplinas--input" name="materias" id="disciplina">
+            <label for="primeira">Nota 1º</label>
+            <input type="number" class="disciplinas--input" name="primeira" id="nota1">
+            <label for="segunda">Nota 2º</label>
+            <input type="number" class="disciplinas--input" name="segunda" id="nota2">
+            <div class="form--btns">
+                <input type="button" value="Adicionar" id="disciplinas--btn" class="btn">
+                <input type="reset" value="Reset" class="btn btn--reset">
+            </div>
+        </form>
+        <section class="cards">
+            <div class="card">
+                <div class="card-notas">
+                    <h4>Matematica</h4>
+                    <h5>5</h5>
+                    <h5>6</h5>
+                </div>
+                <div class="barra"></div>
+            </div>
+        </section>
+    </section>
+    <script src="/main.js"></script>
+</body>
+
+</html>
