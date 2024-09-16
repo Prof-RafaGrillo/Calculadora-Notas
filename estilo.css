@@ -10,7 +10,7 @@
 
 body{
     background: var(--cor-fundo-site) ;
-    height: 200%;
+    height: auto;
     font-size: 18px;
     font-family: var(--fonte-texto);
     color: var(--cor-texto);
@@ -82,6 +82,7 @@ body{
   margin: 20px;
 }
 .card{
+    margin-bottom: 20px;
     background-color: white;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.349);
     border-radius: 20px;
@@ -91,16 +92,32 @@ body{
 .card-notas{
     display: flex;
     justify-content: space-around;
-    margin: 20px;
+    margin: 10px;
     font-size: 20px;
     color: #75C2F6;
 }
 
 .barra{
-    background-color: rgba(0, 0, 0, 0.925);
-    width: 100px;
+    position: relative;
+    margin: 0 20px;
+    background-color: #ccc;
+    width: 200px;
     height: 20px;
-    border: 1px solid red;
+}
+.progresso--bar{
+    position: absolute;
+    height: 20px;
+    width: 20%;
+    background-color: #f6c54c;
 
+}
+.barra--valor{
+    color: #1D5D9B;
+    position:absolute;
+    left: 110%;
+}
+.card--resultado{
+    margin-top: 10px;
+    color: #75C2F6;
 }
 
