@@ -17,6 +17,8 @@ function adicionarDisciplina (){
 
 
     soma =parseFloat(n1) + parseFloat(n2)
+
+    texto = verificaNota(soma)
     
     media = (soma)/2
 
@@ -35,22 +37,28 @@ function adicionarDisciplina (){
                     <h5>${n2}</h5>
                 </div>
                 <div class="barra">
-                    <div class="progresso--bar" style="width:${porcentagem}%"></div>
+                    <div class="progresso--bar" style="width:${porcentagem}%; background-color:${texto[1]}"></div>
                     <div class="barra--valor" >${porcentagem}%</div>
                 </div>
                 <p class="card--resultado">Você precisa de uma nota ${faltante} no 3 trimestre</p>
-                <p class="card--resultado">Falta pouco para passar!</p>
+                <p class="card--resultado">${texto[0]}</p>
             </div>
     `
 
-
-
-    // const card = document.createElement('div')
-    // const conteudo = document.createTextNode( `${disciplina} + ${n1}`)
-    // card.appendChild(conteudo)
-    // console.log(card)
-
-   
-  
 }
 
+function verificaNota(soma){
+    if (soma > 18){
+        return ["Parabens você ja passou", "green"]
+    }
+    else if (soma >= 12 && soma < 18){
+        return ["Você está quase lá", "blue"]
+    }
+    else if (soma < 12 && soma >= 8){
+        return ["Você vai precisar estudar mais neste trimestre", "#f6c54c"]
+    } 
+    else{
+        return ["Você vai precisar estudar para o Se Liga!.", "red"]
+    }
+
+}
